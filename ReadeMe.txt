@@ -1,0 +1,39 @@
+REST APIs must follow certain constraints 
+    1. Clinet-server architecture
+    2. Statelsss - no data from the client is stored on the server-side. The session state is stored on the client-side
+    3. Cacheable - clients can cache server responses to improve performance
+
+CRUD:
+    1. Post: Create
+    2. Get: Read
+    3. Put: Update
+    4. Delete: Delete
+
+
+
+
+
+
+Docker-Compose
+    
+    $ docker-compose up
+        docker-compose up --build # to rebuild
+    
+    $ docker-compose down
+
+    $ docker-compose run web python manage.py startapp polls
+
+    $ docker-compose run web python manage.py makemigrations polls
+
+    $ docker-compose run web python manage.py migrate
+
+    $ docker-compose run web python manage.py createsuperuser
+
+    $ docker-compose run web python manage.py shell
+
+    $ docker-compose run web python manage.py test polls
+
+    $ docker system prune -a # delete all
+
+References:
+    https://medium.com/the-era-of-apis/how-to-build-an-api-in-python-with-flask-rapidapi-a336af4632cd
